@@ -22,4 +22,9 @@ mod test {
         println!("repo");
         repo_info_insert();
     }
+
+    #[test]
+    fn get_dir() {
+        file_sys::get_dir();
+    }
 }
