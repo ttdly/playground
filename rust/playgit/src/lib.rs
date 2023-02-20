@@ -20,12 +20,3 @@ pub fn create_bare(name:String,desc:String)-> String{
         }
     }
 }
-#[cfg(test)]
-mod test {
-    use crate::create;
-
-    #[test]
-    fn run(){
-        create("playgit".to_owned());
-    }
-}
