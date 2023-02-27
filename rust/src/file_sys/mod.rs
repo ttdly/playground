@@ -1,8 +1,10 @@
 use std::{
     fs::{
         remove_dir_all,
-        read_dir,
-        read_to_string}, ffi::OsStr};
+        read_dir}, ffi::OsStr};
+pub mod explore;
+pub mod file;
+
 pub fn remove(){
     let remove_status = remove_dir_all("C:\\Users\\chinchou\\code\\git\\playgit.git");
     if remove_status.is_ok() {
@@ -10,15 +12,17 @@ pub fn remove(){
     }
 }
 
-pub fn get_dir() {
-    let res = read_dir("C:\\Users\\chinchou\\Documents\\AA_MyDocs").unwrap();
+pub fn get_dir(dir: &str){
+    let res = read_dir(dir).unwrap();
     for entry in res {
         let entry = entry.unwrap();
         let path = entry.path();
         let none = OsStr::new("none");
-        if path.extension().unwrap_or(none).eq("md") {
-            println!("{:?}", path.file_name().unwrap_or(none));
-            println!("{:?}", read_to_string(path));
+        if path.is_dir() {
+            let dir = path.to_str().unwrap_or("none");
+            println!("{:?}",dir);
+        } else if path.extension().unwrap_or(none).eq("md") {
+            println!("{:?}", path);
         }
     }
 }

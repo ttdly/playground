@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 playgit = {path = "./playgit"}
 playsqlit ={ path = "./playsqlit"}
+serde = { version = "1.0", features = ["derive"] } # 引用serde并开启derive features
+serde_json = "1.0" # 用于serde<-->json

@@ -25,6 +25,8 @@ mod test {
 
     #[test]
     fn get_dir() {
-        file_sys::get_dir();
+        let result = file_sys::get_dir("C:\\Users\\chinchou\\Documents\\AA_MyDocs");
+        println!("{:#?}",result);
     }
+
 }
