@@ -1,6 +1,7 @@
 
 pub mod env_check;
 pub mod file_sys;
+pub mod info;
 fn main() {
     
 }
