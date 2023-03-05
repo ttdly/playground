@@ -1,4 +1,5 @@
 use git2::{Repository, RepositoryInitOptions};
+
 pub fn create_bare(name:String,desc:String)-> String{
     // 获取到仓库根路径
     let base_dir = "C:\\Users\\chinchou\\code\\git\\";
