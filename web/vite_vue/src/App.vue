@@ -3,7 +3,8 @@ import CodeMirrorTest from './components/CodeMirrorTest.vue';
 </script>
 
 <template>
-  <CodeMirrorTest></CodeMirrorTest>
+  <!-- <CodeMirrorTest></CodeMirrorTest> -->
+  <span class="i-logos-vue"></span>
 </template>
 
 <style scoped>
